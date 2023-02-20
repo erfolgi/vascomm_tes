@@ -1,4 +1,5 @@
 import 'package:get_it/get_it.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:vascomm_tes/data/api/api_service.dart';
 import 'package:vascomm_tes/data/repository/data_source_impl/auth/auth_data_source_impl.dart';
 import 'package:vascomm_tes/data/repository/repository_impl/auth/auth_repository_impl.dart';
@@ -8,7 +9,6 @@ import 'package:vascomm_tes/presentation/blocs/auth/register/register_bloc.dart'
 import 'package:vascomm_tes/presentation/blocs/dashboard/dashboard_bloc.dart';
 import 'package:vascomm_tes/presentation/blocs/profile/profile_setting_bloc.dart';
 import 'package:vascomm_tes/presentation/blocs/splash/splash_bloc.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class DIObject {
   static void init(){

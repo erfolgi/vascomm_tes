@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:vascomm_tes/core/config/app_typography.dart';
 import 'package:vascomm_tes/core/config/extension/string_validation_extension.dart';
 import 'package:vascomm_tes/data/models/text_field_validation.dart';
 import 'package:vascomm_tes/presentation/widgets/app_text.dart';
-import 'package:intl/intl.dart';
 
 class AppUtil{
   static void showSnackBar(BuildContext context, {

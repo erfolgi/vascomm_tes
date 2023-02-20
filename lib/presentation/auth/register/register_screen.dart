@@ -3,11 +3,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:vascomm_tes/core/config/app_color.dart';
 import 'package:vascomm_tes/core/config/app_typography.dart';
 import 'package:vascomm_tes/core/config/const.dart';
-import 'package:vascomm_tes/core/config/dimens.dart';
 import 'package:vascomm_tes/di/di_object.dart';
 import 'package:vascomm_tes/presentation/auth/banner_view.dart';
 import 'package:vascomm_tes/presentation/auth/footer_view.dart';
-
 import 'package:vascomm_tes/presentation/blocs/auth/register/register_bloc.dart';
 import 'package:vascomm_tes/presentation/widgets/app_button.dart';
 import 'package:vascomm_tes/presentation/widgets/app_form_field.dart';

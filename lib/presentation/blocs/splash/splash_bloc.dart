@@ -1,7 +1,4 @@
-import 'dart:async';
-
 import 'package:bloc/bloc.dart';
-import 'package:meta/meta.dart';
 import 'package:vascomm_tes/core/util/app_preference.dart';
 
 part 'splash_event.dart';

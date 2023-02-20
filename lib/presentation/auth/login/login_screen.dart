@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:vascomm_tes/core/config/app_color.dart';
 import 'package:vascomm_tes/core/config/app_typography.dart';
-import 'package:vascomm_tes/core/config/asset_string.dart';
 import 'package:vascomm_tes/core/config/dimens.dart';
 import 'package:vascomm_tes/core/util/app_util.dart';
 import 'package:vascomm_tes/di/di_object.dart';
