@@ -12,9 +12,7 @@ abstract class HttpHelper {
       [Map<String, String>? header]) async {
     dynamic responseJson;
     try {
-      debugPrint("Endpoint $endpoint");
       final response = await http.get(Uri.parse(endpoint), headers: header);
-      debugPrint("Response : ${response.body}");
       responseJson = _returnResponse(response);
     } on SocketException {
       throw NetworkException(message: "Connection Failure");
@@ -26,7 +24,6 @@ abstract class HttpHelper {
       {dynamic body, Map<String, String>? header}) async {
     dynamic responseJson;
     try {
-      debugPrint("Endpoint $endpoint");
       header?['Content-Type'] = "application/json";
 
       final response = await http.post(
@@ -34,7 +31,6 @@ abstract class HttpHelper {
         body: jsonEncode(body),
         headers: header,
       );
-      debugPrint(response.body);
       responseJson = _returnResponse(response);
 
     } on SocketException {
@@ -48,7 +44,6 @@ abstract class HttpHelper {
       {dynamic body, Map<String, String>? header}) async {
     dynamic responseJson;
     try {
-      debugPrint("Endpoint $endpoint");
       header?['Content-Type'] = "application/json";
 
       final response = await http.put(
@@ -67,7 +62,6 @@ abstract class HttpHelper {
       {dynamic body, Map<String, String>? header}) async {
     dynamic responseJson;
     try {
-      debugPrint("Endpoint $endpoint");
       header?['Content-Type'] = "application/json";
 
       final response = await http.patch(
@@ -86,7 +80,6 @@ abstract class HttpHelper {
       {Map<String, String>? header}) async {
     dynamic responseJson;
     try {
-      debugPrint("Endpoint $endpoint");
       final response = await http.delete(Uri.parse(endpoint), headers: header);
       responseJson = _returnResponse(response);
     } on SocketException {
@@ -102,7 +95,6 @@ abstract class HttpHelper {
       }) async {
     dynamic responseJson;
     try {
-      debugPrint("Endpoint $endpoint");
       var uri = Uri.parse(endpoint);
       var request = http.MultipartRequest("POST", uri);
 
@@ -125,7 +117,6 @@ abstract class HttpHelper {
       }
 
       var response = await request.send().then(http.Response.fromStream);
-      debugPrint(response.body);
       responseJson = _returnResponse(response);
     } on SocketException {
       throw NetworkException(message: "Connection Failure");
@@ -141,7 +132,6 @@ abstract class HttpHelper {
       }) async {
     dynamic responseJson;
     try {
-      debugPrint("Endpoint $endpoint");
       var uri = Uri.parse(endpoint);
       var request = http.MultipartRequest("POST", uri);
 

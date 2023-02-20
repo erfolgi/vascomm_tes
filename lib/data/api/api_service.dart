@@ -8,8 +8,6 @@ class ApiService extends HttpHelper {
   /// Auth
   Future<LoginResponse> login({required LoginBody body}) async {
 
-    debugPrint("vvv");
-    debugPrint(body.toJson().toString());
     final map = await postMethod(URL.login,
         body: body, header: {});
     return LoginResponse.fromJson(map);

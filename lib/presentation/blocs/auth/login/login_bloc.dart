@@ -59,7 +59,6 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
         } else {
           if(result.data?.token!=null){
             await AppPreference.setToken(result.data?.token ?? "");
-            debugPrint("SuccessState");
             emit(SuccessState());
           }else{
             emit(ShowErrorState(result.data?.error ?? "Oops, something wrong."));
